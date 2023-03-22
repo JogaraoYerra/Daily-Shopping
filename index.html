@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head>
         <title>tables</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <style>
            
 
@@ -15,20 +16,27 @@
     
             }
             .jpg{
+                background-color: #dbdbed;
+                border: 3px solid rgb(210, 203, 203);
                 padding:6%;
                 display: flex;
                 justify-content:space-evenly;
+                position:static;
+                left: 0%;
             }
             
             .fix{
-                background-color: #4f4fdf;
+
+                background-color: #7a7ae8;
+                border: 3px solid rgb(219, 198, 199);
                 display: flex;
                 justify-content:space-around;
                 position: fixed;
                 left: 0%;
                 top: 0%;
                 right:0%;
-          
+
+                
                 
             }
             .logo1{
@@ -36,29 +44,128 @@
                 right:0%;
                 
             }   
+             .contain{
+                border: 3px solid rgb(219, 198, 199);
+            }
+        *{
+            
+            padding:0px;
+            margin: 0px;
+            text-decoration: none;
+        }
+        .sidebar{
+            position: fixed;
+                left: -195px;
+                background-color: rgba(244, 244, 223, 0.932);
+                width: 15%;
+                list-style-type:none;
+                height: 100%;
+                overflow:auto;
+               
+        }
+        header{
+            color: rgb(31, 20, 19);
+            text-align: center;
+            font-size:xx-large;
+            line-height: 60px;
+            background-color: rgb(196, 206, 8);
+        }
+        li a{
+            color:rgb(51, 32, 28);
+            display: block;
+            padding: 40px;
+            text-align:center;
+        
+            }
+          li a:hover{
+                    color: blue;
+                    background-color: rgb(71, 167, 201);
+          }  
+          #check{
+                    display:none;
+          }
+          label #btn,label #cancel{
+	        position:absolute;
+            cursor:pointer;
+	        
+          }
+         label #btn{
+            left: 2px;
+            top: 2px;
+            font-size: 35px;;
+            color: crimson;
+            background-color: rgb(10, 19, 19);
+            padding: 6px 10px;
+            transition:all .5s;
+
+         }
+         label #cancel{
+            left: -195px;
+            top: 17px;
+            font: size 30px;
+            color: crimson;
+            background-color: rgb(11, 20, 20);
+            padding: 4px 9px;
+            transition: all .5s ease;
+
+         }
+        #check:checked ~.sidebar {
+            left: 0;
+
+         }
+         #check:checked ~label #btn{
+            left: 250px;
+            opacity: 0;
+            pointer-events:none;
+        }
+        #check:checked ~label #cancel{
+            left: 195px;
+        }
         </style>
         <script>
            
         </script>
     </head>
     <body>
+        
         <div class="fix">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fa fa-bars" id="btn"></i>
+                <i class="fa fa-times" id="cancel"></i>
+            </label>
+            <div class="sidebar">
+                <header>Menu</header>
+                <ul>
+                <li><a href="#" >Menu</a>
+                <li><a href="#">Categories</a>
+                <li><a href="#">Notifications</a>
+                <li><a href="#">Account</a>
+                <li><a href="#">cart</a>
+                <li><a href="#">My Orders</a>
+                <li><a href="#">About</a>
+                <li><a href="#">Support</a>
+                <li><a href="#">Logout</a>
+                </ul>
+    
+            </div>
             <div class="logo">
-           <img src="DailyShopLogo.jpg" height="80" width="100">
+           <img src="DailyShopLogo.jpg" height="50" width="100">
            </div>
            <div class="search">
             <b>Search</b><input type="search" name="search" placeholder="search for the Products">
             </div>
             <div class="links">
-           <button><a href="login.html" >LOGIN</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button><a href="register.html" >Register</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button><a href="about.html" >About</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-           <button> <a href="contact.html" >Contact</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="login.html"><button onclick="">Login</button></a>
+            <a href="register.html"><button onclick="">Register</button></a>
+            <a href="about.html"><button onclick="">About</button></a>
+            <a href="contact.html"><button onclick="">Contact</button></a>
             </div>
         </div>
+        <div class="main">
         <div class="jpg">
             <div class="item-1"><a href="fashion.html"><img src="Fashion.webp"></a><ul><b>Fashion</b></div>
-            <div class="item-2"><a href="comingsoon.jpeg"> <img src="Mobile.webp"></a><ul><b>mobiles</b></ul></div>
+            <div class="item-2"><a href="comingsoon.jpeg"> <img src="mobile.webp"></a><ul><b>mobiles</b></ul></div>
             <div class="item-3"><a href="comingsoon.jpeg"> <img src="Grocety.webp"></a><ul><b>Grocety</b></ul></div>
             <div class="item-4"><a href="comingsoon.jpeg"> <img src="Tra.webp"></a><ul><b>Travel</b></ul></div>
             <div class="item-5"><a href="comingsoon.jpeg"> <img src="Two Wheelers.webp"></a><ul><b>TwoWheelers</b></ul></div>
@@ -100,5 +207,6 @@
                     </div>
                 </div>
             </div>
+            </div>
     </body>
-</html>
+</html>v
